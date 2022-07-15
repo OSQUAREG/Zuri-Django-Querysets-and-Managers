@@ -10,3 +10,5 @@ class Link(models.Model):
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     created_date = models.DateField
     active = models.BooleanField(default=True)
+    objects = models.Manager()
+    public = ActiveLinkManager()
